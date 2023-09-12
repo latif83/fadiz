@@ -1,0 +1,7 @@
+{
+  "name": "fadiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
