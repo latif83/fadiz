@@ -1,0 +1,339 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+
+  <div class="banner-contents shadow rounded text-center p-3 ">
+
+    
+    <div class="row align-items-center text-dark">
+      <div class="col-md-6">
+        <h1 style="font-size: 3em; font-family: 'Croissant One', cursive;">Something hot,</h1>
+    <h1 style="font-size: 3em; font-family: 'Croissant One', cursive;">Something tasty</h1>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-warning">
+          Order now for pickup or delivery!
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="choose container text-dark">
+    <h3 class="fw-bold mt-5 text-center">Choose & enjoy</h3>
+    <hr class="bg-info" style="width: 10%; margin: auto; height: 2px; opacity: 100;" />
+    <p class="text-center">Explore our exciting menu and make a choice.</p>
+  
+    <!-- Menu Categories using Ion Segments -->
+    <ion-segment mode="md" class="text-dark" [(ngModel)]="selectedCategory">
+      <ion-segment-button value="pizza">
+        <ion-icon name="pizza"></ion-icon>
+        <ion-label>Pizza</ion-label>
+      </ion-segment-button>
+  
+      <ion-segment-button value="meal">
+        <ion-icon name="restaurant"></ion-icon>
+        <ion-label>Meals</ion-label>
+      </ion-segment-button>
+  
+      <ion-segment-button value="drinks">
+        <ion-icon name="beer"></ion-icon>
+        <ion-label>Drinks</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  
+    <!-- Menu Items (Change ngIf based on the selectedCategory) -->
+    <div *ngIf="selectedCategory === 'pizza'" class="menu-items">
+      <!-- Pizza Items -->
+      <div class="row gy-4 mt-3">
+        <!-- Pizza Item 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/deluze.png" alt="Pizza 1" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Deluxe Pizza</h3>
+              <p>Our deluxe pizza with a variety of toppings.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pizza Item 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/veggie.jpeg" alt="Pizza 2" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Vegetarian Pizza</h3>
+              <p>Our vegetarian pizza with fresh veggies.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pizza Item 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/pepperoni.jpeg" alt="Pizza 3" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Pepperoni Pizza</h3>
+              <p>Our classic pepperoni pizza with lots of pepperoni slices.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div *ngIf="selectedCategory === 'meal'" class="menu-items">
+      <!-- Meal Items -->
+      <div class="row gy-4 mt-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/jollof.jpg" alt="jollof" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Special Jollof with chicken</h3>
+              <p>Indulge in our healthy jollof rice with tender chicken meat.</p>
+            </div>
+             <!-- Price and Size Options -->
+        <div class="card-footer price-options">
+          <div class="row">
+              <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+              <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+              <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+          </div>
+        </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/banku.jpeg" alt="banku" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Banku with tilapia</h3>
+              <p>A delightful combination of tradition and taste awaits you.</p>
+            </div>
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/Spaghetti.jpeg" alt="Spaghetti" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Spaghetti</h3>
+              <p>Each bite is a fusion of Italian tradition and our secret sauce.</p>
+            </div>
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵50.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵40.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵35.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <div *ngIf="selectedCategory === 'drinks'" class="menu-items">
+      <!-- Drink Items -->
+      <div class="row gy-4 mt-3">
+        <!-- Drink Item 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/lemonade.jpeg" alt="Drink 1" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Refreshing Lemonade</h3>
+              <p>Enjoy our refreshing lemonade with a twist.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵8.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵6.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵4.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Drink Item 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/iced.jpeg" alt="Drink 2" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Iced Coffee</h3>
+              <p>Chill with our delicious iced coffee.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵7.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵5.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵3.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Drink Item 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card">
+            <img src="../../../assets/images/fruit.jpeg" alt="Drink 3" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Fruit Smoothie</h3>
+              <p>Indulge in our healthy fruit smoothie blend.</p>
+            </div>
+            <!-- Price and Size Options -->
+            <div class="card-footer price-options">
+              <div class="row">
+                <p class="col text-center"> <ion-badge color="secondary">Large</ion-badge> GH₵9.00</p>
+                <p class="col text-center"> <ion-badge color="primary">Medium</ion-badge> GH₵7.00</p>
+                <p class="col text-center"> <ion-badge color="danger">Small</ion-badge> GH₵5.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="text-warning fw-bold border-bottom">Elevate Your Events with Us</h2>
+        <p class="lead text-dark">
+          Whether it's a wedding, birthday, or any special occasion, we provide the perfect venue for your memorable moments. Your special occasion deserves the best, and we're here to make it unforgettable.
+        </p>
+        <a href="#contact" class="btn w-100 btn-warning btn-lg">
+          <ion-icon name="call" class="me-1"></ion-icon> Get in Touch
+        </a>        
+      </div>
+      <div class="col-lg-6">
+          <video class="rounded shadow" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+            <source src="../../../assets/Video/bannerbg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h3 class="fw-bolder text-center text-danger">Directions & Contact</h3>
+    <hr class="bg-danger mb-3" style="width: 10%; margin: auto; height: 2px; opacity: 100;" />
+    <div class="row align-items-center">
+      <!-- Left Column: Map -->
+      <div class="col-lg-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15880.735343895645!2d-0.2668235!3d5.6865529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9fd6a2298559%3A0xbee0622e143e586a!2sFadiz%20Eatery%20And%20Foods!5e0!3m2!1sen!2sgh!4v1695077986431!5m2!1sen!2sgh" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  
+      <!-- Right Column: Location Details -->
+      <div class="col-lg-6 address text-center text-dark">
+        <ion-item class="text-dark">
+          <ion-icon color="primary" class="me-2" name="business"></ion-icon>
+          <strong class="text-dark">Fadiz Eatery & Foods</strong>
+        </ion-item>
+        <ion-item class="text-dark">
+          <ion-icon color="primary" class="me-2" name="location"></ion-icon>
+          ACP Estate Junction
+        </ion-item>
+        <ion-item class="text-dark">
+          <ion-icon color="primary" class="me-2" name="pin"></ion-icon>
+          Pokuase, Accra
+        </ion-item>
+        <ion-item class="text-dark">
+          <ion-icon color="primary" class="me-2 fw-bold" name="call"></ion-icon>
+          <a href="tel:+0245071868" class="text-decoration-none text-dark">024 507 1868</a> / <a href="tel:+0302445766">030 244 5766</a>
+        </ion-item>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <footer class="bg-dark text-light">
+    <div class="container py-4">
+      <div class="row">
+        <!-- Footer Logo and Navigation -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="mb-4">Fadiz Eatery & Foods</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="mb-4">Contact Us</h4>
+          <address>
+            <p>ACP Estate Junction</p>
+            <p>Pokuase, Accra</p>
+            <p>Phone: 0245071868 / 0302445766</p>
+            <p>Email: info@fadizeatery.com</p>
+          </address>
+        </div>
+  
+        <!-- Social Media Links -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="mb-4">Connect with Us</h4>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+  
+        <!-- Newsletter Signup -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="mb-4">Subscribe to Our Newsletter</h4>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center py-2">
+      <p>&copy; 2023 Fadiz Eatery & Foods. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  
+</ion-content>

@@ -1,0 +1,35 @@
+.ion-show-sm{
+    display: none;
+}
+
+.logo{
+    width: 50px;
+    border-radius: 50%;
+}
+
+ion-button{
+    text-transform: capitalize;
+    font-family: 'Croissant One', cursive;
+    // --transition: background-color 3s ease-in-out, border-radius 3s ease-in-out;
+}
+
+ion-button:hover{
+    --background: black;
+    --border-radius: 1rem;
+    --transition: all 2s ease-in-out;
+}
+
+// ion-toolbar{
+//     --background: url(../../../assets/gifs/bg1.gif);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// }
+
+@media(max-width:700px){
+    .ion-hide-sm{
+        display: none;
+    }
+    .ion-show-sm{
+        display: block;
+    }
+}

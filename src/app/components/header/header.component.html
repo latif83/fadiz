@@ -1,0 +1,37 @@
+<ion-header mode="md" [translucent]="true" style="box-shadow: none; border-bottom: 2px solid red;">
+  <ion-toolbar class="text-dark"  style="background: linear-gradient( #cc9c72, #000);">
+    <!-- Fadiz Eatery Logo -->
+    <ion-title>
+      <div class="d-flex align-items-center">
+        <img src="../../../assets/logos/fadiz-eatery-website-favicon-color1.png.jpg" alt="Fadiz Eatery Logo" class="logo m-2" />
+      <div class="flex-column fw-bold">
+        <h2 class="m-0 text-dark">FADIZ</h2>
+      <h6 class="m-0 text-end" style="font-family: cursive;">Eatery</h6>
+      </div>
+      </div>
+    </ion-title>
+
+    <!-- Navigation Links -->
+    <ion-buttons class="ion-hide-sm text-primary fw-bold" slot="end">
+      <ion-button routerLink="/menu">
+        <ion-icon color="primary" name="pizza-outline"></ion-icon>
+        Our Menu
+      </ion-button>
+      
+      <ion-button>
+        <ion-icon color="primary" name="location-outline"></ion-icon>
+        Branches
+      </ion-button>
+      
+      <ion-button>
+        <ion-icon color="primary" name="call-outline"></ion-icon>
+        Contact Us
+      </ion-button>
+      
+    </ion-buttons>
+
+    <ion-buttons class="ion-show-sm" slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
